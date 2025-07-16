@@ -3,7 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
 import CartPanel from "@/app/ui/cart-panel";
-import {createCart, fetchCartById} from "@/app/lib/data";
+import {createCart} from "@/app/lib/data";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",

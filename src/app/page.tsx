@@ -1,6 +1,6 @@
 import ProductList from "@/app/ui/product/product-list";
 import ProductFilter from "@/app/ui/product/product-filter";
-import {createCart, fetchCategories} from "@/app/lib/data";
+import {createCart} from "@/app/lib/data";
 import {Suspense} from "react";
 
 export default async function Home(props: {

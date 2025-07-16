@@ -1,13 +1,7 @@
 'use client'
 
 import {usePathname, useSearchParams, useRouter} from "next/navigation";
-import {z} from "zod";
 import {useState} from "react";
-
-const FormSchema = z.object({
-  name: z.string(),
-  category: z.string(),
-});
 
 export default function ProductSearch({categories}: {categories: Array<string>}) {
   const searchParams = useSearchParams();
@@ -16,10 +10,6 @@ export default function ProductSearch({categories}: {categories: Array<string>})
 
   const [name, setName] = useState('');
   const [category, setCategory] = useState('');
-
-  const handleChangeOption = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setCategory(e.target.value);
-  };
 
   const handleSearch = () => {
 
@@ -57,7 +47,7 @@ export default function ProductSearch({categories}: {categories: Array<string>})
               value={"all"}
               id='all'
               checked={category === 'all'}
-              onChange={(e) => setCategory('all')}/>
+              onChange={() => setCategory('all')}/>
             <label htmlFor={'all'} className={'text-sm cursor-pointer capitalize'}>All categories</label>
           </div>
           {categories.map((cat,index) => (
@@ -68,7 +58,7 @@ export default function ProductSearch({categories}: {categories: Array<string>})
                 type={'radio'}
                 value={cat}
                 checked={category === cat}
-                onChange={(e) => setCategory(cat)}/>
+                onChange={() => setCategory(cat)}/>
               <label htmlFor={index.toString()} className={'text-sm cursor-pointer capitalize'}>{cat}</label>
             </div>
           ))}

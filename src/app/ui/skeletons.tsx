@@ -1,7 +1,3 @@
-const shimmer =
-  '';
-
-
 export default function ProductSkeleton() {
   return (
     <div className={`shimmer relative overflow-hidden rounded-xl bg-gray-100 p-2 shadow-sm`}>

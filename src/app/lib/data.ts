@@ -87,7 +87,7 @@ export async function updateCart(cart: Cart) {
 }
 
 export async function addProductToCart(cart: Cart, product: Product) {
-  let existingCart : Cart = await fetch('https://fakestoreapi.com/carts/'+cart.id)
+  const existingCart : Cart = await fetch('https://fakestoreapi.com/carts/'+cart.id)
     .then(res=>res.json());
 
   if (existingCart == null) return;
@@ -98,12 +98,12 @@ export async function addProductToCart(cart: Cart, product: Product) {
 }
 
 export async function removeProductToCart(cart: Cart, product: Product) {
-  let existingCart : Cart = await fetch('https://fakestoreapi.com/carts/'+cart.id)
+  const existingCart : Cart = await fetch('https://fakestoreapi.com/carts/'+cart.id)
     .then(res=>res.json());
 
   if (existingCart == null) return;
 
-  let index = existingCart.products.findIndex(product => product.id == product.id);
+  const index = existingCart.products.findIndex(product => product.id == product.id);
   existingCart.products.splice(index, 1);
 
 

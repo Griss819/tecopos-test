@@ -1,11 +1,10 @@
 'use client'
 
-import {Cart, fetchCartById, Product} from "@/app/lib/data";
-import {useEffect, useState} from "react";
+import {Cart, Product} from "@/app/lib/data";
+import {useState} from "react";
 
 export default function CartPanel({cart}: {cart?: Cart}) {
   const [visible, setVisible] = useState<boolean>(false);
-  const [loading, setLoading] = useState<boolean>(false);
 
   return (
     <div className={'flex flex-end'}>
