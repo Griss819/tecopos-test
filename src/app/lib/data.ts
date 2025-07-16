@@ -89,7 +89,7 @@ export async function updateCart(cart: Cart) {
 }
 
 export async function addProductToCart(cartId: number, product: Product) {
-  console.log('action executed');
+
   const existingCart : Cart = await fetch('https://fakestoreapi.com/carts/'+cartId)
     .then(res=>res.json());
 
