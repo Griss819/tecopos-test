@@ -1,5 +1,10 @@
 import {fetchProductById} from "@/app/lib/data";
 import Image from "next/image";
+import {Metadata} from "next";
+
+export const metadata: Metadata = {
+  title: 'Products',
+};
 
 export default async function ProductPage(props: { params: Promise<{ id: string }> }) {
   const params = await props.params;
