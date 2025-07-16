@@ -33,7 +33,7 @@ body {
   }
 
   .main-form-button, .add-cart-button {
-    @apply bg-orange-500 py-2 text-white rounded-sm px-4 text-sm mt-2 cursor-pointer hover:bg-orange-400;
+    @apply bg-orange-500 py-2 gap-2 min-w-[100px] text-white rounded-sm px-4 text-sm mt-2 cursor-pointer hover:bg-orange-400;
   }
   .details-link {
     @apply py-2 border-2 border-gray-200 rounded-sm px-4 text-sm mt-2 cursor-pointer hover:bg-gray-100;

@@ -10,6 +10,9 @@ export default async function Home(props: {
   }>;
 }) {
   const searchParams = await props.searchParams;
+  const name = searchParams?.name;
+  const category = searchParams?.category;
+  console.log(name, category);
   await createCart();
   return (
     <div className={'product-display '}>
@@ -17,7 +20,7 @@ export default async function Home(props: {
         <div>
           <ProductFilter />
         </div>
-        <ProductList name={searchParams?.name} category={searchParams?.category} />
+        <ProductList name={name} category={category} />
       </Suspense>
     </div>
   );

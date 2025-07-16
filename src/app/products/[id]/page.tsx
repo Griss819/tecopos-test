@@ -1,6 +1,7 @@
 import {fetchProductById} from "@/app/lib/data";
 import Image from "next/image";
 import {Metadata} from "next";
+import AddProductButton from "@/app/ui/product/add-product-button";
 
 export const metadata: Metadata = {
   title: 'Products',
@@ -50,7 +51,7 @@ export default async function ProductPage(props: { params: Promise<{ id: string 
         </div>
         <p>{product.description}</p>
         <div>
-          <button className={'add-cart-button mt-auto'}><em className={'fa fa-cart-plus'}></em> Add to cart</button>
+          <AddProductButton product={product}></AddProductButton>
         </div>
       </div>
 

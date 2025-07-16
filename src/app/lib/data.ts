@@ -1,6 +1,7 @@
 'use server'
 
 import {fetch} from "next/dist/compiled/@edge-runtime/primitives";
+import {redirect} from "next/navigation";
 
 export type Product = {
   id: number;
@@ -90,16 +91,25 @@ export async function updateCart(cart: Cart) {
 
 export async function addProductToCart(cartId: number, product: Product) {
 
-  const existingCart : Cart = await fetch('https://fakestoreapi.com/carts/'+cartId)
+  let existingCart : Cart = await fetch('https://fakestoreapi.com/carts/'+cartId)
     .then(res=>res.json());
 
-  console.log(existingCart);
+  console.log('from server actions',existingCart);
 
   if (existingCart == null) return;
 
   existingCart.products.push(product);
 
-  return await updateCart(existingCart);
+  console.log('from server actions',existingCart);
+
+  const res = await updateCart(existingCart);
+
+  existingCart  = await fetch('https://fakestoreapi.com/carts/'+cartId)
+    .then(res=>res.json());
+
+  console.log('from server actions',existingCart);
+
+  return res;
 }
 
 export async function removeProductToCart(cart: Cart, product: Product) {
@@ -115,4 +125,18 @@ export async function removeProductToCart(cart: Cart, product: Product) {
   cart.products.push(product);
 
   return await updateCart(cart);
+}
+
+export async function confirmPurchase() {
+
+  const existingCart : Cart = await fetch('https://fakestoreapi.com/carts/'+11)
+    .then(res=>res.json());
+
+  if (existingCart == null) return;
+
+  existingCart.products = [];
+
+  await updateCart(existingCart);
+
+  redirect('/');
 }

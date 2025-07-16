@@ -17,7 +17,7 @@ export default async function ProductList({name, category}: {name?: string; cate
       <div className={'grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-3'}>
         <Suspense fallback={<ProductSkeleton />}>
           {products.map((product, index) => (
-            <ProductItem key={index} data={product}></ProductItem>
+            <ProductItem key={index} product={product}></ProductItem>
           ))}
         </Suspense>
       </div>
