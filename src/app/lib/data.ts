@@ -1,3 +1,5 @@
+'use server'
+
 import {fetch} from "next/dist/compiled/@edge-runtime/primitives";
 
 export type Product = {
@@ -86,15 +88,18 @@ export async function updateCart(cart: Cart) {
   return response;
 }
 
-export async function addProductToCart(cart: Cart, product: Product) {
-  const existingCart : Cart = await fetch('https://fakestoreapi.com/carts/'+cart.id)
+export async function addProductToCart(cartId: number, product: Product) {
+  console.log('action executed');
+  let existingCart : Cart = await fetch('https://fakestoreapi.com/carts/'+cartId)
     .then(res=>res.json());
+
+  console.log(existingCart);
 
   if (existingCart == null) return;
 
-  cart.products.push(product);
+  existingCart.products.push(product);
 
-  return await updateCart(cart);
+  return await updateCart(existingCart);
 }
 
 export async function removeProductToCart(cart: Cart, product: Product) {
