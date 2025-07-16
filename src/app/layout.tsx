@@ -32,7 +32,7 @@ export default async function RootLayout({
         <header className={'store-header'}>
           <Link href="/" className={'flex gap-4 items-center w-fit'}>
             <em className={'fa fa-store text-orange-500 text-[40px]'}></em>
-            <span className={'font-bold text-lg'}>Mi<span className={'text-orange-500'}>Tienda</span>Online</span>
+            <span className={'font-bold text-lg'}>MyOnline<span className={'text-orange-500'}>Store</span></span>
           </Link>
           <CartPanel cart={cart}></CartPanel>
         </header>
