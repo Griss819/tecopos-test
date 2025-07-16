@@ -3,7 +3,6 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
 import CartPanel from "@/app/ui/cart-panel";
-import {fetchCart} from "@/app/lib/data";
 import {Suspense} from "react";
 
 const geistSans = Geist({
@@ -29,9 +28,6 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const cart = await fetchCart();
-  console.log(cart);
-
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
@@ -41,7 +37,7 @@ export default async function RootLayout({
             <span className={'font-bold text-lg'}>MyOnline<span className={'text-orange-500'}>Store</span></span>
           </Link>
           <Suspense>
-            <CartPanel cart={cart}></CartPanel>
+            <CartPanel></CartPanel>
           </Suspense>
         </header>
         <main className={'store-main-content'}>

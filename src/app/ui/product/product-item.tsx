@@ -1,4 +1,4 @@
-import {Product} from "@/app/lib/data";
+import {Product} from "@/app/lib/server-actions";
 import Image from "next/image";
 import Link from "next/link";
 import AddProductButton from "@/app/ui/product/add-product-button";

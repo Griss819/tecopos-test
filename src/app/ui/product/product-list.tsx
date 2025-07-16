@@ -1,4 +1,4 @@
-import {fetchProducts} from "@/app/lib/data";
+import {fetchProducts} from "@/app/lib/server-actions";
 import ProductSkeleton from "@/app/ui/skeletons";
 import {Suspense} from "react";
 import ProductItem from "@/app/ui/product/product-item";

@@ -1,4 +1,4 @@
-import {fetchProductById} from "@/app/lib/data";
+import {fetchProductById} from "@/app/lib/server-actions";
 import Image from "next/image";
 import {Metadata} from "next";
 import AddProductButton from "@/app/ui/product/add-product-button";

@@ -1,4 +1,4 @@
-import {fetchCategories} from "@/app/lib/data";
+import {fetchCategories} from "@/app/lib/server-actions";
 import ProductSearch from "@/app/ui/product/product-search";
 
 export default async function ProductFilter() {
