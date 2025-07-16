@@ -25,7 +25,7 @@ export default function ProductSearch({categories}: {categories: Array<string>})
   };
 
   return (
-    <div className={'flex flex-col gap-4 fixed max-w-[200px]'}>
+    <div className={'flex flex-col gap-4 relative md:fixed md:max-w-[200px]'}>
       <div className={'flex flex-col gap-1'}>
         <label className={'text-sm font-semibold'}>Search by product name</label>
         <input

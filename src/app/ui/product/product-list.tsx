@@ -14,9 +14,8 @@ export default async function ProductList({name, category}: {name?: string; cate
           <p>There are no products matching the search ...</p>
         </div>
       )}
-      <div className={'grid grid-cols-2 lg:col-span-1 gap-x-6 gap-y-3'}>
+      <div className={'grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-3'}>
         <Suspense fallback={<ProductSkeleton />}>
-
           {products.map((product, index) => (
             <ProductItem key={index} data={product}></ProductItem>
           ))}

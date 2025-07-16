@@ -12,7 +12,7 @@ export default async function Home(props: {
   const searchParams = await props.searchParams;
   await createCart();
   return (
-    <div className={'product-display'}>
+    <div className={'product-display '}>
       <Suspense fallback={(<div><em className={'fa fa-circle-o-notch fa-spin'}></em> Loading</div>)}>
         <div>
           <ProductFilter />

@@ -7,7 +7,7 @@ export default async function ProductPage(props: { params: Promise<{ id: string 
   const product = await fetchProductById(parseInt(id));
 
   return (
-    <div className={'flex flex-row gap-6 mb-auto'}>
+    <div className={'flex flex-col gap-6 mb-auto md:flex-row'}>
       <Image
         src={product.image}
         alt={'product image'}
