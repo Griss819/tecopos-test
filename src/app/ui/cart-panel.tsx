@@ -47,7 +47,7 @@ export default function CartPanel() {
                       </div>
                     </div>
                     <button onClick={() => {
-                      let response = removeProductToCart(p.product);
+                      const response = removeProductToCart(p.product);
                       setCart(response);
                     }} className={'details-link w-fit'}><em className={'fa fa-trash'}></em></button>
                   </div>
