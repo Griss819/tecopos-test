@@ -19,7 +19,8 @@ export type Product = {
 export type Cart = {
   id: number;
   userId: number;
-  products: Product[];
+  date: Date;
+  products: { productId: number, quantity: number }[];
 };
 
 export async function fetchProducts(name?: string, category?: string) {
@@ -46,38 +47,41 @@ export async function fetchProductById(id: number) {
   return response;
 }
 
-export async function createCart() {
-
-  const cartId = parseInt(process.env.CART_ID!);
-  const userId = parseInt(process.env.USER_ID!);
-  const products: Product[] = [];
-
-  const existingCart : Cart = await fetch('https://fakestoreapi.com/carts/'+cartId)
+export async function fetchCart() {
+  const response : Cart = await fetch('https://fakestoreapi.com/carts/'+process.env.CART_ID!)
     .then(res=>res.json());
 
-  if (existingCart != null || existingCart != undefined) return;
-
-  const response: Cart = await fetch('https://fakestoreapi.com/carts', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({cartId, userId, products}),
-  }).then(res=>res.json());
-
-  console.log(response);
   return response;
 }
 
-export async function fetchCartById(id: number) {
-  const response : Cart = await fetch('https://fakestoreapi.com/carts/'+id)
+export async function addProductToCart(product: Product) {
+  const existingCart : Cart = await fetch('https://fakestoreapi.com/carts/'+process.env.CART_ID!)
     .then(res=>res.json());
 
-  console.log(response);
-  return response;
+  if (existingCart == null) return;
+
+  const index = existingCart.products.findIndex(p => p.productId == product.id)
+  if (index <= -1) {
+    existingCart.products.push({productId:product.id, quantity:1});
+  }
+  else existingCart.products[index].quantity++;
+
+  return await updateCart(existingCart);
 }
 
-export async function updateCart(cart: Cart) {
+export async function removeProductToCart(cart: Cart, product: Product) {
+  const existingCart : Cart = await fetch('https://fakestoreapi.com/carts/'+cart.id)
+    .then(res=>res.json());
+
+  if (existingCart == null ||
+    existingCart.products.length == 0 ||
+    !existingCart.products.find(p => p.productId == product.id)) return;
+
+  cart.products.map(product =>  { if (product.productId == product.productId) product.quantity--});
+  return await updateCart(cart);
+}
+
+async function updateCart(cart: Cart) {
   const response: Cart = await fetch('https://fakestoreapi.com/carts/'+cart.id, {
     method: 'PUT',
     headers: {
@@ -87,44 +91,6 @@ export async function updateCart(cart: Cart) {
   }).then(res=>res.json());
 
   return response;
-}
-
-export async function addProductToCart(cartId: number, product: Product) {
-
-  let existingCart : Cart = await fetch('https://fakestoreapi.com/carts/'+cartId)
-    .then(res=>res.json());
-
-  console.log('from server actions',existingCart);
-
-  if (existingCart == null) return;
-
-  existingCart.products.push(product);
-
-  console.log('from server actions',existingCart);
-
-  const res = await updateCart(existingCart);
-
-  existingCart  = await fetch('https://fakestoreapi.com/carts/'+cartId)
-    .then(res=>res.json());
-
-  console.log('from server actions',existingCart);
-
-  return res;
-}
-
-export async function removeProductToCart(cart: Cart, product: Product) {
-  const existingCart : Cart = await fetch('https://fakestoreapi.com/carts/'+cart.id)
-    .then(res=>res.json());
-
-  if (existingCart == null) return;
-
-  const index = existingCart.products.findIndex(product => product.id == product.id);
-  existingCart.products.splice(index, 1);
-
-
-  cart.products.push(product);
-
-  return await updateCart(cart);
 }
 
 export async function confirmPurchase() {
