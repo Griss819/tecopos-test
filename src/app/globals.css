@@ -1,0 +1,47 @@
+@import "tailwindcss";
+@import "../../public/fontawesome/css/all.css";
+
+:root {
+  --background: #ffffff;
+}
+
+body {
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+  display: grid;
+  grid-template-rows: 70px 1fr 70px;
+  gap:20px;
+}
+
+.product-display {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap:20px;
+}
+
+@layer components {
+  .store-header {
+    @apply flex justify-between px-12 items-center;
+  }
+  .store-main-content {
+    @apply flex flex-col px-12 overflow-auto;
+  }
+  .store-footer {
+    @apply flex justify-center items-center px-12;
+  }
+
+  .shimmer {
+    @apply before:absolute before:inset-0 before:-translate-x-full before:animate-[shimmer_2s_infinite] before:bg-gradient-to-r before:from-transparent before:via-white/60 before:to-transparent;
+  }
+
+  .input-text {
+    @apply border-[1px] border-gray-200 outline-orange-500 py-2 rounded-sm px-4 text-sm;
+  }
+
+  .main-form-button, .add-cart-button {
+    @apply bg-orange-500 py-2 text-white rounded-sm px-4 text-sm mt-2 cursor-pointer hover:bg-orange-400;
+  }
+  .details-link {
+    @apply py-2 border-2 border-gray-200 rounded-sm px-4 text-sm mt-2 cursor-pointer hover:bg-gray-100;
+  }
+}
