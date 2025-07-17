@@ -1,6 +1,6 @@
 # 🛒 Tienda Online – Prueba Técnica TECOPOS
 
-Aplicación desarrollada como parte de la prueba técnica frontend para TECOPOS. Se trata de una tienda online funcional construida con tecnologías modernas, enfocada en buena estructura, diseño intuitivo y gestión eficiente del estado.
+Aplicación desarrollada como parte de la prueba técnica frontend para TECOPOS
 
 ---
 
@@ -11,6 +11,20 @@ Aplicación desarrollada como parte de la prueba técnica frontend para TECOPOS.
 - **Gestión de estado:** React Context API
 - **Datos de productos:** [Fake Store API](https://fakestoreapi.com/)
 - **Despliegue:** [Vercel](https://vercel.com/) _(ver enlace abajo)_
+
+---
+
+## 🧪 Correr el proyecto localmente
+
+# 1. Clona el repositorio
+git clone https://github.com/tu-usuario/tecopos-tienda.git
+cd tecopos-tienda
+
+# 2. Instala las dependencias
+npm install
+
+# 3. Ejecuta el servidor de desarrollo
+npm run dev
 
 ---
 
