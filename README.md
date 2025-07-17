@@ -45,4 +45,4 @@ npm run dev
 ---
 
 ## 📦 Link de la app en producción
-- https://tecopos-test.vercel.app/
+- https://tecopos-test.vercel.app
