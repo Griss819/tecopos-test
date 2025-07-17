@@ -8,7 +8,6 @@ Aplicación desarrollada como parte de la prueba técnica frontend para TECOPOS
 
 - **Framework principal:** [Next.js](https://nextjs.org/)
 - **Estilos:** [TailwindCSS](https://tailwindcss.com/)
-- **Gestión de estado:** React Context API
 - **Datos de productos:** [Fake Store API](https://fakestoreapi.com/)
 - **Despliegue:** [Vercel](https://vercel.com/) _(ver enlace abajo)_
 
@@ -16,14 +15,13 @@ Aplicación desarrollada como parte de la prueba técnica frontend para TECOPOS
 
 ## 🧪 Correr el proyecto localmente
 
-# 1. Clona el repositorio
+### 1. Clona el repositorio
 git clone https://github.com/tu-usuario/tecopos-tienda.git
-cd tecopos-tienda
 
-# 2. Instala las dependencias
+### 2. Instala las dependencias
 npm install
 
-# 3. Ejecuta el servidor de desarrollo
+### 3. Ejecuta el servidor de desarrollo
 npm run dev
 
 ---
@@ -42,4 +40,9 @@ npm run dev
 ### 3. Carrito de Compras
 - Lista de productos agregados
 - Modificación de cantidad y eliminación
-- Cálculo de 
+- Cálculo del precio total de todos los productos
+
+---
+
+## 📦 Link de la app en producción
+- https://tecopos-test.vercel.app/
