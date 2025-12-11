@@ -25,12 +25,12 @@ export default function UserContextProvider({ children }: { children: ReactNode 
         await new Promise((res) => setTimeout(res, 800));
         var token = await AsyncStorage.getItem("token");
 
-        if (!token) router.replace('//login');
+        if (!token) router.replace('/login');
         else {
           const currentUser = await authService.login("fake-token-123");
           setUser(currentUser);
 
-          router.replace('//bank-accounts');
+          router.replace('/bank-accounts');
         }
       }
       catch (error) {
@@ -50,6 +50,8 @@ export default function UserContextProvider({ children }: { children: ReactNode 
 
       const currentUser = await authService.login("fake-token-123");
       setUser(currentUser);
+
+      router.replace('/bank-accounts');
     }
     catch (error) {
       throw error;
@@ -58,7 +60,7 @@ export default function UserContextProvider({ children }: { children: ReactNode 
 
   async function logout() {
     await AsyncStorage.removeItem("token");
-    router.replace('//login');
+    router.replace('/login');
   }
 
   return (

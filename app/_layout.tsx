@@ -4,7 +4,7 @@ import { useEffect } from 'react';
 import 'react-native-reanimated';
 
 import {SafeAreaProvider, SafeAreaView} from "react-native-safe-area-context";
-import {KeyboardAvoidingView} from "react-native";
+import {KeyboardAvoidingView, StyleSheet} from "react-native";
 import UserContextProvider from "@/contexts/userContext";
 
 // Prevent the splash screen from auto-hiding before asset loading is complete.
@@ -19,7 +19,7 @@ export default function RootLayout() {
     <SafeAreaProvider>
       <UserContextProvider>
         <SafeAreaView>
-          <KeyboardAvoidingView>
+          <KeyboardAvoidingView style={styles.rootContainer}>
             <Slot></Slot>
           </KeyboardAvoidingView>
         </SafeAreaView>
@@ -27,3 +27,10 @@ export default function RootLayout() {
     </SafeAreaProvider>
   )
 }
+
+const styles = StyleSheet.create({
+  rootContainer: {
+    display: "flex",
+    flexDirection: "column",
+  }
+});
