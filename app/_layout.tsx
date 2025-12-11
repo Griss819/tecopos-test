@@ -1,13 +1,10 @@
-import FontAwesome from '@expo/vector-icons/FontAwesome';
-import { DarkTheme, DefaultTheme, ThemeProvider } from '@react-navigation/native';
-import { useFonts } from 'expo-font';
-import {Slot, Stack} from 'expo-router';
+import {Slot} from 'expo-router';
 import * as SplashScreen from 'expo-splash-screen';
 import { useEffect } from 'react';
 import 'react-native-reanimated';
 
-import {SafeAreaProvider} from "react-native-safe-area-context";
-import {KeyboardAvoidingView, SafeAreaView} from "react-native";
+import {SafeAreaProvider, SafeAreaView} from "react-native-safe-area-context";
+import {KeyboardAvoidingView} from "react-native";
 import UserContextProvider from "@/contexts/userContext";
 
 // Prevent the splash screen from auto-hiding before asset loading is complete.
@@ -19,10 +16,14 @@ export default function RootLayout() {
   },[]);
 
   return (
-    <UserContextProvider>
-      <KeyboardAvoidingView>
-        <Slot></Slot>
-      </KeyboardAvoidingView>
-    </UserContextProvider>
+    <SafeAreaProvider>
+      <UserContextProvider>
+        <SafeAreaView>
+          <KeyboardAvoidingView>
+            <Slot></Slot>
+          </KeyboardAvoidingView>
+        </SafeAreaView>
+      </UserContextProvider>
+    </SafeAreaProvider>
   )
 }
