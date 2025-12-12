@@ -4,22 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="35561aa3-5edb-4f81-97bc-8e0666b6d22a" name="Changes" comment="refactor: stop using deprecated SafeAreaView component">
-      <change afterPath="$PROJECT_DIR$/components/ui/CustomButton.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/ui/CustomCard.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/ui/CustomFormControl.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/ui/CustomHeader.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/ui/CustomText.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/ui/CustomTextInput.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/ui/Spacer.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/validation-functions.ts" afterDir="false" />
+    <list default="true" id="35561aa3-5edb-4f81-97bc-8e0666b6d22a" name="Changes" comment="feat: authentication">
+      <change afterPath="$PROJECT_DIR$/components/skelletons/BankAccountSkelleton.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/ui/CustomDatepicker.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/ui/CustomSelect.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/bankAccountService.ts" beforeDir="false" afterPath="$PROJECT_DIR$/api/bankAccountService.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/_layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/_layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/bank-accounts/[id]/create/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/bank-accounts/[id]/create/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/bank-accounts/[id]/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/bank-accounts/[id]/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/bank-accounts/_layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/bank-accounts/_layout.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/bank-accounts/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/bank-accounts/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/login.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/contexts/userContext.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/contexts/userContext.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ui/CustomCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ui/CustomCard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ui/CustomHeader.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ui/CustomHeader.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ui/CustomTextInput.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ui/CustomTextInput.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
@@ -57,7 +57,7 @@
     &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/repos/tecopos-test/lib&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/repos/tecopos-test/components/ui&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -69,6 +69,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\repos\tecopos-test\components\ui" />
       <recent name="C:\repos\tecopos-test\lib" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -90,7 +91,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1765464572634</updated>
-      <workItem from="1765464573788" duration="16429000" />
+      <workItem from="1765464573788" duration="28685000" />
     </task>
     <task id="LOCAL-00001" summary="feat: initialize expo project with expo-router template">
       <option name="closed" value="true" />
@@ -108,7 +109,15 @@
       <option name="project" value="LOCAL" />
       <updated>1765484739839</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="feat: authentication">
+      <option name="closed" value="true" />
+      <created>1765490408966</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1765490408966</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -128,6 +137,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="feat: initialize expo project with expo-router template" />
     <MESSAGE value="refactor: stop using deprecated SafeAreaView component" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor: stop using deprecated SafeAreaView component" />
+    <MESSAGE value="feat: authentication" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: authentication" />
   </component>
 </project>

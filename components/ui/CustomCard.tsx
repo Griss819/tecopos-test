@@ -1,11 +1,17 @@
-import {Platform, StyleSheet, View} from "react-native";
+import {Platform, StyleSheet, TouchableOpacity, View} from "react-native";
 import {ReactNode} from "react";
 
-export default function CustomCard({children} : { children: ReactNode }) {
+export default function CustomCard({children, onClick} : { children: ReactNode, onClick?: () => void }) {
   return (
-    <View style={[styles.cardContainer, shadowStyle]}>
-      {children}
-    </View>
+    onClick ? (
+      <TouchableOpacity style={styles.cardContainer} onPress={onClick}>
+        {children}
+      </TouchableOpacity>
+    ) : (
+      <View style={styles.cardContainer}>
+        {children}
+      </View>
+    )
   )
 }
 
@@ -13,9 +19,10 @@ const styles = StyleSheet.create({
   cardContainer: {
     display: "flex",
     flexDirection: "column",
-    alignItems: "center",
     padding: 20,
-    borderRadius: 15,
+    borderRadius: 10,
+    borderWidth: 2,
+    borderColor: "lightgray"
   }
 });
 const shadowStyle = Platform.select({

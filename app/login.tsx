@@ -35,7 +35,9 @@ export default function Login() {
 
   return (
     <View style={styles.loginContainer}>
-      <CustomText>Accede usando tus credenciales</CustomText>
+      <Spacer height={40}></Spacer>
+      <CustomText fontSize={20}>Accede usando tus credenciales</CustomText>
+      <Spacer height={40}></Spacer>
       <View style={styles.form}>
         <CustomFormControl label={'Correo'} formError={formErrors.email ? formErrors.email.message : null}>
           <CustomTextInput
@@ -53,7 +55,7 @@ export default function Login() {
           ></CustomTextInput>
         </CustomFormControl>
         <Spacer height={30}></Spacer>
-        <CustomButton onClick={handleSubmit} name={'Acceder'} iconName={'home'}></CustomButton>
+        <CustomButton onClick={handleSubmit} name={'Acceder'}></CustomButton>
       </View>
     </View>
   )
@@ -64,7 +66,6 @@ const styles = StyleSheet.create({
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
-    borderWidth: 4,
     padding: 40,
     height: '100%',
     width: '100%',
