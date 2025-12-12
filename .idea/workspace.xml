@@ -4,24 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="35561aa3-5edb-4f81-97bc-8e0666b6d22a" name="Changes" comment="feat: authentication">
-      <change afterPath="$PROJECT_DIR$/components/skelletons/BankAccountSkelleton.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/ui/CustomDatepicker.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/ui/CustomSelect.tsx" afterDir="false" />
+    <list default="true" id="35561aa3-5edb-4f81-97bc-8e0666b6d22a" name="Changes" comment="feat: account list, account transactions, add or remove transactions, filter transactions">
+      <change afterPath="$PROJECT_DIR$/eas.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/bankAccountService.ts" beforeDir="false" afterPath="$PROJECT_DIR$/api/bankAccountService.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/_layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/_layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/bank-accounts/[id]/create/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/bank-accounts/[id]/create/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/bank-accounts/[id]/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/bank-accounts/[id]/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/bank-accounts/_layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/bank-accounts/_layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/bank-accounts/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/bank-accounts/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/login.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ui/CustomCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ui/CustomCard.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ui/CustomHeader.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ui/CustomHeader.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ui/CustomTextInput.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ui/CustomTextInput.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.json" beforeDir="false" afterPath="$PROJECT_DIR$/app.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,7 +77,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1765464572634</updated>
-      <workItem from="1765464573788" duration="28685000" />
+      <workItem from="1765464573788" duration="29462000" />
     </task>
     <task id="LOCAL-00001" summary="feat: initialize expo project with expo-router template">
       <option name="closed" value="true" />
@@ -117,7 +103,15 @@
       <option name="project" value="LOCAL" />
       <updated>1765490408966</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="feat: account list, account transactions, add or remove transactions, filter transactions">
+      <option name="closed" value="true" />
+      <created>1765502727724</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1765502727724</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -138,6 +132,7 @@
     <MESSAGE value="feat: initialize expo project with expo-router template" />
     <MESSAGE value="refactor: stop using deprecated SafeAreaView component" />
     <MESSAGE value="feat: authentication" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: authentication" />
+    <MESSAGE value="feat: account list, account transactions, add or remove transactions, filter transactions" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: account list, account transactions, add or remove transactions, filter transactions" />
   </component>
 </project>

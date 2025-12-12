@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "tecopos-test",
-    "slug": "tecopos-test",
+    "name": "Account Shelter",
+    "slug": "account-shelter",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
@@ -22,7 +22,8 @@
         "backgroundColor": "#ffffff"
       },
       "edgeToEdgeEnabled": true,
-      "predictiveBackGestureEnabled": false
+      "predictiveBackGestureEnabled": false,
+      "package": "com.tecopos.accountshelter"
     },
     "web": {
       "bundler": "metro",
@@ -34,6 +35,13 @@
     ],
     "experiments": {
       "typedRoutes": true
-    }
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "411d010f-7133-4ec1-8454-9352b18fab1f"
+      }
+    },
+    "owner": "griss819"
   }
 }
